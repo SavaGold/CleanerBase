@@ -15,7 +15,7 @@ app.post('/', (req, res) => {
         var filename = file.name
         console.log(filename);
 
-        file.mv(__dirname + '/uploads/' + filename, function (err) {
+        file.mv( './uploads/' + filename, function (err) {
             if (err) {
                 res.send(err)
             } else {
