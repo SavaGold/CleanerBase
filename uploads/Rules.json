@@ -1,0 +1,242 @@
+[
+    {
+        "qos": "low",
+        "district": "low",
+        "beat": "low",
+        "grid": "low",
+        "latitude": "low",
+        "longitude": "middle"
+    },
+    {
+        "qos": "low",
+        "district": "low",
+        "beat": "low",
+        "grid": "low",
+        "latitude": "low",
+        "longitude": "middle"
+    },
+    {
+        "qos": "low",
+        "district": "middle",
+        "beat": "low",
+        "grid": "low",
+        "latitude": "low",
+        "longitude": "middle"
+    },
+    {
+        "qos": "low",
+        "district": "low",
+        "beat": "middle",
+        "grid": "low",
+        "latitude": "low",
+        "longitude": "middle"
+    },
+    {
+        "qos": "low",
+        "district": "low",
+        "beat": "low",
+        "grid": "middle",
+        "latitude": "low",
+        "longitude": "middle"
+    },
+    {
+        "qos": "low",
+        "district": "low",
+        "beat": "low",
+        "grid": "low",
+        "latitude": "middle",
+        "longitude": "middle"
+    },
+    {
+        "qos": "middle",
+        "district": "low",
+        "beat": "low",
+        "grid": "low",
+        "latitude": "low",
+        "longitude": "middle"
+    },
+    {
+        "qos": "low",
+        "district": "low",
+        "beat": "low",
+        "grid": "low",
+        "latitude": "low",
+        "longitude": "high"
+    },
+    {
+        "qos": "high",
+        "district": "low",
+        "beat": "low",
+        "grid": "low",
+        "latitude": "low",
+        "longitude": "middle"
+    },
+    {
+        "qos": "low",
+        "district": "high",
+        "beat": "low",
+        "grid": "low",
+        "latitude": "low",
+        "longitude": "middle"
+    },
+    {
+        "qos": "low",
+        "district": "low",
+        "beat": "low",
+        "grid": "high",
+        "latitude": "low",
+        "longitude": "middle"
+    },
+    {
+        "qos": "low",
+        "district": "low",
+        "beat": "low",
+        "grid": "high",
+        "latitude": "low",
+        "longitude": "middle"
+    },
+    {
+        "qos": "low",
+        "district": "low",
+        "beat": "low",
+        "grid": "high",
+        "latitude": "low",
+        "longitude": "middle"
+    },
+    {
+        "qos": "low",
+        "district": "low",
+        "beat": "low",
+        "grid": "high",
+        "latitude": "low",
+        "longitude": "middle"
+    },
+    {
+        "qos": "low",
+        "district": "low",
+        "beat": "low",
+        "grid": "high",
+        "latitude": "low",
+        "longitude": "middle"
+    },
+    {
+        "qos": "low",
+        "district": "low",
+        "beat": "low",
+        "grid": "low",
+        "latitude": "low",
+        "longitude": "middle"
+    },
+    {
+        "qos": "low",
+        "district": "low",
+        "beat": "low",
+        "grid": "low",
+        "latitude": "low",
+        "longitude": "middle"
+    },
+    {
+        "qos": "low",
+        "district": "middle",
+        "beat": "low",
+        "grid": "low",
+        "latitude": "low",
+        "longitude": "middle"
+    },
+    {
+        "qos": "low",
+        "district": "low",
+        "beat": "middle",
+        "grid": "low",
+        "latitude": "low",
+        "longitude": "middle"
+    },
+    {
+        "qos": "low",
+        "district": "low",
+        "beat": "low",
+        "grid": "middle",
+        "latitude": "low",
+        "longitude": "middle"
+    },
+    {
+        "qos": "low",
+        "district": "low",
+        "beat": "low",
+        "grid": "low",
+        "latitude": "middle",
+        "longitude": "middle"
+    },
+    {
+        "qos": "middle",
+        "district": "low",
+        "beat": "low",
+        "grid": "low",
+        "latitude": "low",
+        "longitude": "middle"
+    },
+    {
+        "qos": "low",
+        "district": "low",
+        "beat": "low",
+        "grid": "low",
+        "latitude": "low",
+        "longitude": "high"
+    },
+    {
+        "qos": "high",
+        "district": "low",
+        "beat": "low",
+        "grid": "low",
+        "latitude": "low",
+        "longitude": "middle"
+    },
+    {
+        "qos": "low",
+        "district": "high",
+        "beat": "low",
+        "grid": "low",
+        "latitude": "low",
+        "longitude": "middle"
+    },
+    {
+        "qos": "low",
+        "district": "low",
+        "beat": "low",
+        "grid": "high",
+        "latitude": "low",
+        "longitude": "middle"
+    },
+    {
+        "qos": "low",
+        "district": "low",
+        "beat": "low",
+        "grid": "high",
+        "latitude": "low",
+        "longitude": "middle"
+    },
+    {
+        "qos": "low",
+        "district": "low",
+        "beat": "low",
+        "grid": "high",
+        "latitude": "low",
+        "longitude": "middle"
+    },
+    {
+        "qos": "low",
+        "district": "low",
+        "beat": "low",
+        "grid": "high",
+        "latitude": "low",
+        "longitude": "middle"
+    },
+    {
+        "qos": "low",
+        "district": "low",
+        "beat": "low",
+        "grid": "high",
+        "latitude": "low",
+        "longitude": "middle"
+    }
+]
