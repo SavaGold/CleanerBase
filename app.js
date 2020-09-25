@@ -15,11 +15,11 @@ app.post('/', (req, res) => {
         var filename = file.name
         console.log(filename);
 
-        file.mv('./uploads/' + filename, function (err) {
+        file.mv(__dirname + '/uploads/' + filename, function (err) {
             if (err) {
                 res.send(err)
             } else {
-                var configJSON = fs.readFileSync(`./uploads/Rules.json`);
+                var configJSON = fs.readFileSync(`./uploads/${filename}`);
                 var configDict = JSON.parse(configJSON);
                 console.log(configDict.length);
                 var keys = Object.keys(configDict[0]);
