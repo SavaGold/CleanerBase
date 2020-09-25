@@ -84,4 +84,8 @@ app.post('/', (req, res) => {
 // console.log(res.length)
 
 
-app.listen(3000);
+const PORT = process.env.PORT || 80
+
+app.listen(PORT, ()=> {
+    console.log('Server has been started')
+})
