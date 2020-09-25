@@ -15,7 +15,7 @@ app.post('/', (req, res) => {
         var filename = file.name
         console.log(filename);
 
-        file.mv( './uploads/' + filename, function (err) {
+        file.mv('./uploads/' + filename, function (err) {
             if (err) {
                 res.send(err)
             } else {
@@ -48,8 +48,15 @@ app.post('/', (req, res) => {
                 });
 
                 // console.log(newArrayOfObjects)
-                res.send(newArrayOfObjects);
+                // res.send(newArrayOfObjects);
 
+                fs.writeFileSync(__dirname + '/clean-rules/Clean-rules.json', JSON.stringify(newArrayOfObjects, null, '\t'), (err) => {
+                    if (err) throw err;
+
+                })
+                console.log(newArrayOfObjects.length);
+                console.log('The file has been cleaned!');
+                res.download(__dirname + '/clean-rules/Clean-rules.json', 'Clean-rules.json');
             }
         })
     }
@@ -86,6 +93,6 @@ app.post('/', (req, res) => {
 
 const PORT = process.env.PORT || 80
 
-app.listen(PORT, ()=> {
+app.listen(PORT, () => {
     console.log('Server has been started')
 })
