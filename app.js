@@ -19,6 +19,7 @@ app.post('/', (req, res) => {
             if (err) {
                 res.send(err)
             } else {
+                const start= new Date().getTime();
                 var configJSON = fs.readFileSync(`./uploads/${filename}`);
                 var configDict = JSON.parse(configJSON);
                 console.log(configDict.length);
@@ -57,10 +58,14 @@ app.post('/', (req, res) => {
                 console.log(newArrayOfObjects.length);
                 console.log('The file has been cleaned!');
                 res.download(__dirname + '/clean-rules/Clean-rules.json', 'Clean-rules.json');
+                const end = new Date().getTime();
+                console.log(`Algorithm time: ${end - start}ms`);
+
             }
         })
     }
 })
+
 
 // var configJSON = fs.readFileSync(`./uploads/${filename}`);
 // var configDict = JSON.parse(configJSON);
