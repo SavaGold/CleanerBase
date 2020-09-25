@@ -66,36 +66,6 @@ app.post('/', (req, res) => {
     }
 })
 
-
-// var configJSON = fs.readFileSync(`./uploads/${filename}`);
-// var configDict = JSON.parse(configJSON);
-
-
-// console.log(configDict);
-// console.log(configDict.length);
-
-// function addWeight(obj, key, data) {
-//     obj[key] = data;
-// }
-// configDict.map(function (item) {
-//     return addWeight(item, 'weight', '1');
-// });
-
-
-
-// let o = configDict.reduce((acc, cv) => {
-//     if (!acc[JSON.stringify(cv)]) {
-//         acc[JSON.stringify(cv)] = true; //something non-falsy
-//     }
-//     return acc;
-// }, {});
-// // console.log(o);
-
-// let res = Object.keys(o).map(x => JSON.parse(x));
-// console.log(res);
-// console.log(res.length)
-
-
 const PORT = process.env.PORT || 80
 
 app.listen(PORT, () => {
