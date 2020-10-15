@@ -47,11 +47,45 @@ app.post('/', (req, res) => {
                 counterObjKeys.forEach((key) => {
                     newArrayOfObjects.push(counterObj[key])
                 });
-
-                // console.log(newArrayOfObjects)
+                //Delete CONFLICTS
+                var keysConf = Object.keys(newArrayOfObjects[0]);
+                newArrayOfObjects.sort((a, b) => a.weight < b.weight ? 1 : -1);
+                for (i = 0; i < keysConf.length; i++) {
+                    if (keysConf[i] == 'qos') {
+                        keysConf.splice(i, 1);
+                    } if (keysConf[i] == 'weight') {
+                        keysConf.splice(i, 1);
+                    }
+                }
+                var counterObjConf = {};
+                newArrayOfObjects.forEach(obj => {
+                    keyForCounterObj = '';
+                    keysConf.forEach(key => {
+                        keyForCounterObj += String(obj[key]);
+                    })
+                    if (counterObjConf[keyForCounterObj]) {
+                        counterObjConf[keyForCounterObj].weight += obj.weight
+                        counterObjConf[keyForCounterObj].count++
+                    } else {
+                        counterObjConf[keyForCounterObj] = {
+                            ...obj,
+                            count: 1
+                        }
+                    }
+                });
+                let clearArrayOfObjects = [];
+                const counterObjKeysConf = Object.keys(counterObjConf)
+                counterObjKeysConf.forEach((key) => {
+                    clearArrayOfObjects.push(counterObjConf[key])
+                });
+                clearArrayOfObjects.forEach(item => {
+                    item.weight = Math.floor((item.weight / item.count) * 100) / 100;
+                    delete item.count
+                })
+                //    console.log(newArrayOfObjects)
                 // res.send(newArrayOfObjects);
 
-                fs.writeFileSync(__dirname + '/clean-rules/Clean-rules.json', JSON.stringify(newArrayOfObjects, null, '\t'), (err) => {
+                fs.writeFileSync(__dirname + '/clean-rules/Clean-rules.json', JSON.stringify(clearArrayOfObjects, null, '\t'), (err) => {
                     if (err) throw err;
 
                 })
@@ -139,7 +173,7 @@ app.post('/', (req, res) => {
                 }
                 );
 
-                console.log(newArrayOfObjects.length);
+                // console.log(clearArrayOfObjects.length);
                 console.log('The file has been cleaned!');
                 res.download(__dirname + '/clean-rules/Rules.json', 'Rules.json');
                 const end = new Date().getTime();
